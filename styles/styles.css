@@ -1,0 +1,24 @@
+:root {
+  --game-width: 352px;
+  --game-height: 198px;
+}
+
+body {
+  background-color: #333;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.game-container {
+  width: var(--game-width);
+  height: var(--game-height);
+  border: 1px solid white;
+  margin: 0 auto;
+  transform: scale(3) translateY(50%);
+}
+
+.game-container canvas {
+  image-rendering: pixelated;
+  background-color: blue;
+}
