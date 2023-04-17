@@ -1,13 +1,14 @@
-import { Sprite } from "./sprite";
+import { Animation, Sprite } from "./sprite";
 
 export class GameObject {
-  public x: number;
-  public y: number;
   public sprite: Sprite;
 
-  constructor(x: number, y: number, sprite: Sprite) {
-    this.x = x;
-    this.y = y;
-    this.sprite = sprite;
+  constructor(
+    imageSource: string,
+    x: number,
+    y: number,
+    animation?: Animation | undefined
+  ) {
+    this.sprite = new Sprite(imageSource, x, y, animation);
   }
 }
