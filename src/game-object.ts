@@ -2,6 +2,7 @@ import { Animation, Sprite } from "./sprite";
 
 export class GameObject {
   public sprite: Sprite;
+  public direction: string = "down";
 
   constructor(
     imageSource: string,
@@ -11,4 +12,6 @@ export class GameObject {
   ) {
     this.sprite = new Sprite(imageSource, x, y, animation);
   }
+
+  update(delta: number): void {}
 }

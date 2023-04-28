@@ -1,4 +1,4 @@
-import { Game } from "./game-controller";
+import { GameController } from "./game-controller";
 
 const gameContainer = document.querySelector(".game-container");
 const gameCanvas = gameContainer?.querySelector(
@@ -6,7 +6,6 @@ const gameCanvas = gameContainer?.querySelector(
 ) as HTMLCanvasElement;
 const context = gameCanvas.getContext("2d") as CanvasRenderingContext2D;
 
-const world = new Game(gameCanvas, context);
-world.init();
+const world = new GameController(gameCanvas, context);
 
 // const hero = new GameObject()

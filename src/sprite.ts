@@ -25,17 +25,7 @@ export class Sprite {
 
   public draw(context: CanvasRenderingContext2D) {
     if (this.isImageLoaded) {
-      context.drawImage(
-        this.image,
-        0,
-        0,
-        32,
-        32,
-        this.x * 16,
-        this.y * 16,
-        32,
-        32
-      );
+      context.drawImage(this.image, 0, 0, 32, 32, this.x, this.y, 32, 32);
     }
   }
 }
